@@ -42,17 +42,7 @@
          id="session{{session.id}}" class="thumbnail row session">
 
         <div class="row session">
-            <div class="col-xs-1 votingWidget">
-                <div class="votingButton" ng-click="upVoteSession(session)">
-                    <span class="glyphicon glyphicon-chevron-up"></span>
-                </div>
-                <div class="badge badge-inverse">
-                    <div>{{session.upVoteCount}}</div>
-                </div>
-                <div class="votingButton" ng-click="downVoteSession(session)">
-                    <span class="glyphicon glyphicon-chevron-down" />
-                </div>
-            </div>
+            <upvote up-vote="upVoteSession(session)" down-vote="downVoteSession(session)" count="session.upVoteCount" />
             <div class="col-xs-4">
                 <h4 class="well-title">{{session.name}}</h4>
                 <h6 style="margin-top:-10px">{{session.creatorName}}</h6>
