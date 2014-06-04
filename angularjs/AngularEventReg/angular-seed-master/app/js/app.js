@@ -27,6 +27,7 @@ var eventsApp = angular.module('eventsApp', ['ngSanitize', 'ngResource', 'ngCook
                 templateUrl: 'templates/SampleDirective.html',
                 controller: 'SampleDirectiveController'
             })
+        $routeProvider.otherwise({redirectTo: '/events'})
     })
     .factory('myCache', function($cacheFactory) {
         return $cacheFactory('myCache', {capacity:3});
