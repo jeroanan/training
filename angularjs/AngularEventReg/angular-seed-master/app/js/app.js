@@ -22,6 +22,11 @@ var eventsApp = angular.module('eventsApp', ['ngSanitize', 'ngResource', 'ngCook
                     }
                 }
             });
+        $routeProvider.when('/sampleDirective',
+            {
+                templateUrl: 'templates/SampleDirective.html',
+                controller: 'SampleDirectiveController'
+            })
     })
     .factory('myCache', function($cacheFactory) {
         return $cacheFactory('myCache', {capacity:3});
